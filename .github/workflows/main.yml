@@ -1,10 +1,23 @@
 name: Error1
 
 on:
+
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      os:
+        description: 'Operating System to run the job on'
+        required: true
+        default: 'ubuntu-latest'
+      surname:
+        description: 'Surname to use in the message'
+        required: true
+        default: 'Doe'
+
+
 #Le problème : eho Hello, world!; runs-on: ${{ inputs.os }}
 jobs:
   build:
