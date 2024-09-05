@@ -8,8 +8,8 @@ on:
 #Le problème : eho Hello, world!; runs-on: ${{ inputs.os }}
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.os }}
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
-        run: echo Hello, World!
+        run: echo Hello, ${{ inputs.surname }}!
