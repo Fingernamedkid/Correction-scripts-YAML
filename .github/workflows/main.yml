@@ -1,0 +1,16 @@
+name: Error1
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ${{ inputs.os }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run a one-line script
+        run: echo Hello, ${{ inputs.surname }}!
