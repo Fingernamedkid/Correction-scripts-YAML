@@ -8,10 +8,12 @@ on:
         description: 'Test scenario tags'
         required: true
         type: string
+        default: 'windows-latest'
        surname:
         description: 'Test scenario tags'
         required: true
         type: string
+        default: 'AUGHHHHH'
   push:
     branches: [ "main" ]
   pull_request:
