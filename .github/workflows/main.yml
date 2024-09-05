@@ -8,15 +8,14 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
     inputs:
-      os:
-        description: 'Operating System to run the job on'
+       os:
+        description: 'Test scenario tags'
         required: true
-        default: 'ubuntu-latest'
-      surname:
-        description: 'Surname to use in the message'
+        type: string
+       surname:
+        description: 'Test scenario tags'
         required: true
-        default: 'Doe'
-
+        type: string
 
 #Le problème : eho Hello, world!; runs-on: ${{ inputs.os }}
 jobs:
